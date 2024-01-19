@@ -594,6 +594,10 @@ video {
   margin-left: 0.5rem;
 }
 
+.ml-8 {
+  margin-left: 2rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -621,10 +625,6 @@ video {
 
 .w-4\/5 {
   width: 80%;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .translate-x-1\/2 {
