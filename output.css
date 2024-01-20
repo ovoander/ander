@@ -598,12 +598,12 @@ video {
   margin-bottom: 4rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-32 {
@@ -628,6 +628,34 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mb-\[8\] {
+  margin-bottom: 8;
+}
+
+.mb-\[8r\] {
+  margin-bottom: 8r;
+}
+
+.mb-\[8rem\] {
+  margin-bottom: 8rem;
 }
 
 .flex {
@@ -864,6 +892,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
   .lg\:size-16 {
     width: 4rem;
     height: 4rem;
