@@ -63,7 +63,7 @@
         class="bg-zinc-100 text-zinc-900 transition-colors duration-300 dark:bg-zinc-800 dark:text-zinc-100"
     >
         <div
-            class="sticky top-0 z-50 flex select-none items-center bg-zinc-200 p-3 shadow-md shadow-black/30 dark:bg-zinc-700"
+            class="sticky top-0 z-40 flex select-none items-center bg-zinc-200 p-3 shadow-md shadow-black/30 dark:bg-zinc-700"
         >
             <div class="mx-auto flex w-full items-center lg:w-4/5">
                 <a class="text-4xl font-bold" href="#" title="Back To Top"
@@ -116,9 +116,9 @@
         </div>
         <div
             id="sidebar"
-            class="fixed right-0 flex h-screen w-0 items-start justify-center overflow-hidden bg-zinc-200 transition-all duration-300 dark:bg-zinc-700"
+            class="fixed right-0 z-50 flex h-screen w-0 items-start justify-center overflow-hidden bg-zinc-200 transition-all duration-300 dark:bg-zinc-700"
         >
-            <ul class="p-4 font-medium">
+            <ul class="relative h-full p-4 font-medium">
                 <li class="mb-4">
                     <a
                         href="#about"
@@ -141,7 +141,7 @@
                     >
                 </li>
                 <div
-                    class="mb-96 flex h-[50vh] items-end justify-center lg:h-[75vh]"
+                    class="absolute bottom-0 mb-20 flex items-end justify-center"
                 >
                     <a
                         class="transition-colors hover:text-zinc-600 dark:hover:text-zinc-400"
@@ -302,7 +302,7 @@
             © 2024 Ander. All Rights Reserved
         </div>
         <a
-            class="absolute bottom-0 right-1/2 translate-x-1/2"
+            class="absolute bottom-0 right-1/2 z-10 translate-x-1/2"
             href="#about"
             title="About"
         >
