@@ -57,6 +57,17 @@
             }
         };
 
+        const toggleSidebar = () => {
+            const sidebar = document.getElementById("sidebar");
+            const sidebarWidth = sidebar.offsetWidth;
+
+            if (sidebarWidth === 0) {
+                sidebar.classList.replace("w-0", "w-48");
+            } else {
+                sidebar.classList.replace("w-48", "w-0");
+            }
+        };
+
         setInitialTheme();
     </script>
     <body
@@ -91,8 +102,8 @@
                     </svg>
                 </button>
                 <button
-                    id="toggleSidebar"
                     class="ml-2 transition-colors hover:text-zinc-600 dark:hover:text-zinc-400"
+                    onclick="toggleSidebar()"
                     title="Menu"
                 >
                     <svg
@@ -116,7 +127,7 @@
         </div>
         <div
             id="sidebar"
-            class="fixed right-0 z-50 flex h-screen w-0 items-start justify-center overflow-hidden bg-zinc-200 transition-all duration-300 dark:bg-zinc-700"
+            class="fixed right-0 z-50 flex h-screen w-0 items-start justify-center overflow-hidden bg-zinc-200 text-center transition-all duration-300 dark:bg-zinc-700"
         >
             <ul class="relative h-full p-4 font-medium">
                 <li class="mb-4">
@@ -321,19 +332,6 @@
                 <path d="m6 9 6 6 6-6" />
             </svg>
         </a>
-        <script>
-            const sidebarButton = document.getElementById("toggleSidebar");
-            const sidebar = document.getElementById("sidebar");
-
-            sidebarButton.addEventListener("click", () => {
-                const sidebarWidth = sidebar.offsetWidth;
-
-                if (sidebarWidth === 0) {
-                    sidebar.style.width = "10rem";
-                } else {
-                    sidebar.style.width = 0;
-                }
-            });
-        </script>
+        <script></script>
     </body>
 </html>
