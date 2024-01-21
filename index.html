@@ -322,15 +322,16 @@
             </svg>
         </a>
         <script>
-            const toggleButton = document.getElementById("toggleSidebar");
+            const sidebarButton = document.getElementById("toggleSidebar");
             const sidebar = document.getElementById("sidebar");
 
-            toggleButton.addEventListener("click", () => {
+            sidebarButton.addEventListener("click", () => {
                 const sidebarWidth = sidebar.offsetWidth;
+
                 if (sidebarWidth === 0) {
-                    sidebar.style.width = "12rem";
+                    sidebar.style.width = "10rem";
                 } else {
-                    sidebar.style.width = "0";
+                    sidebar.style.width = 0;
                 }
             });
         </script>
