@@ -42,17 +42,24 @@
     </head>
     <script>
         const html = document.documentElement;
-        const themeKey = "theme";
+        const theme = "theme";
 
         const toggleTheme = () => {
             html.classList.toggle("dark");
-            const isDarkMode = html.classList.contains("dark");
-            localStorage.setItem(themeKey, isDarkMode ? "dark" : "light");
+            if (html.classList.contains("dark")) {
+                localStorage.setItem(theme, "dark");
+            } else {
+                localStorage.setItem(theme, "light");
+            }
         };
 
         const setInitialTheme = () => {
-            const savedTheme = localStorage.getItem(themeKey);
+            const savedTheme = localStorage.getItem(theme);
             if (savedTheme === "dark") {
+                html.classList.add("dark");
+            } else if (savedTheme !== "dark") {
+                html.classList.remove("dark");
+            } else {
                 html.classList.add("dark");
             }
         };
