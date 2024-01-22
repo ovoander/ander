@@ -40,40 +40,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ander</title>
     </head>
-    <script>
-        const html = document.documentElement;
-        const theme = "theme";
 
-        const toggleTheme = () => {
-            const themeButton = document.getElementById("themeButton");
-
-            html.classList.toggle("dark");
-            if (html.classList.contains("dark")) {
-                localStorage.setItem(theme, "dark");
-            } else {
-                localStorage.setItem(theme, "light");
-            }
-        };
-
-        const setInitialTheme = () => {
-            const savedTheme = localStorage.getItem(theme);
-            if (savedTheme === "dark") {
-                html.classList.add("dark");
-            }
-        };
-
-        const toggleSidebar = () => {
-            const sidebar = document.getElementById("sidebar");
-            const sidebarWidth = sidebar.offsetWidth;
-            if (sidebarWidth === 0) {
-                sidebar.classList.replace("w-0", "w-48");
-            } else {
-                sidebar.classList.replace("w-48", "w-0");
-            }
-        };
-
-        setInitialTheme();
-    </script>
     <body
         class="bg-zinc-100 text-zinc-900 transition-colors duration-300 dark:bg-zinc-800 dark:text-zinc-100"
     >
@@ -84,11 +51,11 @@
 
             <button
                 class="ml-auto transition-colors hover:text-zinc-600 dark:hover:text-zinc-400"
-                id="themeButton"
-                onclick="toggleTheme()"
+                id="theme-button"
                 title="Toggle Theme"
             >
                 <svg
+                    id="moon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="32"
                     height="32"
@@ -98,22 +65,37 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-sun-moon"
+                    class="lucide lucide-moon"
                 >
-                    <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" />
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+                <svg
+                    id="sun"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-sun"
+                >
+                    <circle cx="12" cy="12" r="4" />
                     <path d="M12 2v2" />
                     <path d="M12 20v2" />
-                    <path d="m4.9 4.9 1.4 1.4" />
-                    <path d="m17.7 17.7 1.4 1.4" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
                     <path d="M2 12h2" />
                     <path d="M20 12h2" />
-                    <path d="m6.3 17.7-1.4 1.4" />
-                    <path d="m19.1 4.9-1.4 1.4" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
                 </svg>
             </button>
             <button
                 class="ml-2 transition-colors hover:text-zinc-600 dark:hover:text-zinc-400"
-                onclick="toggleSidebar()"
+                id="menu-button"
                 title="Menu"
             >
                 <svg
@@ -341,5 +323,6 @@
                 <path d="m6 9 6 6 6-6" />
             </svg>
         </a>
+        <script src="script.js"></script>
     </body>
 </html>
