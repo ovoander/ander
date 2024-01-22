@@ -57,17 +57,12 @@
             const savedTheme = localStorage.getItem(theme);
             if (savedTheme === "dark") {
                 html.classList.add("dark");
-            } else if (savedTheme !== "dark") {
-                html.classList.remove("dark");
-            } else {
-                html.classList.add("dark");
             }
         };
 
         const toggleSidebar = () => {
             const sidebar = document.getElementById("sidebar");
             const sidebarWidth = sidebar.offsetWidth;
-
             if (sidebarWidth === 0) {
                 sidebar.classList.replace("w-0", "w-48");
             } else {
