@@ -42,3 +42,13 @@ menuButton.addEventListener("click", () => {
         sidebar.classList.replace("w-48", "w-0");
     }
 });
+
+document.addEventListener("click", (event) => {
+    if (!event.target.closest("#header") && !event.target.closest("#sidebar")) {
+        const sidebar = document.getElementById("sidebar");
+        const sidebarWidth = sidebar.offsetWidth;
+        if (sidebarWidth !== 0) {
+            sidebar.classList.replace("w-48", "w-0");
+        }
+    }
+});
