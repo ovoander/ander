@@ -1,8 +1,8 @@
 const theme = "theme";
 const themeButton = document.getElementById("theme-button");
 const menuButton = document.getElementById("menu-button");
-const moonIcon = document.getElementById("moon");
-const sunIcon = document.getElementById("sun");
+const moonIcon = document.getElementById("moon-icon");
+const sunIcon = document.getElementById("sun-icon");
 
 themeButton.addEventListener("click", () => {
     document.documentElement.classList.toggle("dark");
