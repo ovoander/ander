@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sunIcon.removeAttribute("hidden");
     moonIcon.setAttribute("hidden", true);
   } else {
+    localStorage.setItem(theme, "dark");
     html.classList.add("dark");
     moonIcon.removeAttribute("hidden");
     sunIcon.setAttribute("hidden", true);
