@@ -13,4 +13,14 @@ const toggleSidebar = () => {
   }
 };
 
+const handleDocumentClick = (event) => {
+  if (!event.target.closest("#header") && !event.target.closest("#sidebar")) {
+    const sidebarWidth = sidebar.offsetWidth;
+    if (sidebarWidth !== 0) {
+      sidebar.style.width = "0px";
+    }
+  }
+};
+
+document.addEventListener("click", handleDocumentClick);
 sidebarButton.addEventListener("click", toggleSidebar);
