@@ -1,13 +1,3 @@
-:root {
-  --sidebar-width: 150px;
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --sidebar-width: 200px;
-  }
-}
-
 *,
 ::before,
 ::after {
@@ -106,5 +96,11 @@ body {
 }
 
 #sidebar.open {
-  width: var(--sidebar-width);
+  width: 150px;
+}
+
+@media (min-width: 1024px) {
+  #sidebar.open {
+    width: 200px;
+  }
 }
