@@ -1,3 +1,13 @@
+:root {
+  --sidebar-width: 150px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --sidebar-width: 200px;
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -31,8 +41,8 @@ input {
 }
 
 body {
-  background-color: hsl(0, 0%, 10%);
-  color: hsl(0, 0%, 100%);
+  background-color: hsl(225, 5%, 10%);
+  color: hsl(225, 5%, 100%);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -41,7 +51,7 @@ body {
   align-items: center;
   justify-content: start;
   position: sticky;
-  background-color: hsl(0, 0%, 15%);
+  background-color: hsl(225, 5%, 15%);
   padding: 10px;
   height: 60px;
   user-select: none;
@@ -69,12 +79,12 @@ body {
 }
 
 .navbar-btn:hover {
-  background-color: hsl(0, 0%, 20%);
+  background-color: hsl(225, 5%, 20%);
 }
 
 .navbar-btn:active {
   transition: none;
-  background-color: hsl(0, 0%, 25%);
+  background-color: hsl(225, 5%, 25%);
 }
 
 #arrow-icon {
@@ -86,11 +96,15 @@ body {
   display: flex;
   align-items: start;
   justify-content: center;
-  background-color: hsl(0, 0%, 15%);
+  background-color: hsl(225, 5%, 15%);
   top: 60px;
   right: 0;
   bottom: 0;
-  width: 0px;
+  width: 0;
   overflow: hidden;
   transition: 300ms width ease;
+}
+
+#sidebar.open {
+  width: var(--sidebar-width);
 }
