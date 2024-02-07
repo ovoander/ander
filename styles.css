@@ -42,7 +42,7 @@ body {
   justify-content: start;
   position: sticky;
   background-color: hsl(225, 5%, 15%);
-  padding: 8px;
+  padding: 12px;
   height: 64px;
   user-select: none;
   z-index: 50;
