@@ -14,7 +14,7 @@ html,
 body {
   background-color: hsl(225, 5%, 10%);
   color: hsl(225, 5%, 100%);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
