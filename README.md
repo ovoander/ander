@@ -6,4 +6,4 @@
 
 # Languages
 
-- This website is coded completely in vanilla HTML, CSS, and Javascript
+- This website is completely coded in vanilla HTML, CSS, and Javascript.
