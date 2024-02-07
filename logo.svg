@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <g id="Base">
-          <circle cx="256" cy="256" r="256" style="fill: #f87171" />
-        </g>
-        <g id="Line">
-          <path
-            d="m101.96,384.46l111.91-256h84.82l111.94,256h-89.26l-82.65-215.05h33.66l-82.65,215.05h-87.77Zm66.55-44.61l21.93-62.17h117.77l21.93,62.17h-161.64Z"
-            style="fill: #f4f4f5"
-          />
-        </g>
-      </svg>
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g id="Base"><circle cx="256" cy="256" r="256" style="fill: #f87171" /></g><g id="Line"><path d="m101.96,384.46l111.91-256h84.82l111.94,256h-89.26l-82.65-215.05h33.66l-82.65,215.05h-87.77Zm66.55-44.61l21.93-62.17h117.77l21.93,62.17h-161.64Z" style="fill: #f4f4f5"/></g></svg>
