@@ -6,4 +6,4 @@
 
 # Languages
 
-- This website was coded with Vanilla HTML, and [TailwindCSS](https://tailwindcss.com/).
+- This website is coded completely in vanilla HTML, CSS, and Javascript
