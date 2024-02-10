@@ -41,6 +41,7 @@ body {
   background-color: var(--zinc-1);
   color: var(--zinc-10);
   font-family: "Montserrat", sans-serif;
+  transition: 300ms background-color, color ease;
 }
 
 body.dark {
