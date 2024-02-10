@@ -1,27 +1,40 @@
 :root {
-  --zinc-0: #fafafa;
-  --zinc-1: #f4f4f5;
-  --zinc-2: #e4e4e7;
-  --zinc-3: #d4d4d8;
-  --zinc-4: #a1a1aa;
-  --zinc-5: #71717a;
-  --zinc-6: #52525b;
-  --zinc-7: #3f3f46;
-  --zinc-8: #27272a;
-  --zinc-9: #18181b;
-  --zinc-10: #09090b;
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
 
-  --violet-0: #f5f3ff;
-  --violet-1: #ede9fe;
-  --violet-2: #ddd6fe;
-  --violet-3: #c4b5fd;
-  --violet-4: #a78bfa;
-  --violet-5: #8b5cf6;
-  --violet-6: #7c3aed;
-  --violet-7: #6d28d9;
-  --violet-8: #5b21b6;
-  --violet-9: #4c1d95;
-  --violet-10: #2e1065;
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+  --indigo-950: #1e1b4b;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
 *,
@@ -38,15 +51,15 @@ html,
 }
 
 body {
-  background-color: var(--zinc-1);
-  color: var(--zinc-10);
+  background-color: var(--zinc-100);
+  color: var(--zinc-900);
   font-family: "Montserrat", sans-serif;
   transition: 300ms background-color, color ease;
 }
 
 body.dark {
-  background-color: var(--zinc-8);
-  color: var(--zinc-1);
+  background-color: var(--zinc-800);
+  color: var(--zinc-100);
 }
 
 a {
@@ -67,9 +80,11 @@ input {
 
 #header {
   align-items: center;
-  background-color: var(--zinc-2);
+  background-color: var(--zinc-200);
   display: flex;
+  position: sticky;
   height: 48px;
+  top: 8px;
   justify-content: start;
   margin: 8px;
   padding: 8px;
@@ -81,7 +96,7 @@ input {
 }
 
 .dark #header {
-  background-color: var(--zinc-7);
+  background-color: var(--zinc-700);
 }
 
 #header > a {
@@ -104,19 +119,19 @@ input {
 }
 
 .navbar-btn:hover {
-  background-color: var(--zinc-3);
+  background-color: var(--zinc-300);
 }
 .dark .navbar-btn:hover {
-  background-color: var(--zinc-6);
+  background-color: var(--zinc-600);
 }
 
 .navbar-btn:active {
-  background-color: var(--zinc-4);
+  background-color: var(--zinc-400);
   transition: none;
 }
 
 .dark .navbar-btn:active {
-  background-color: var(--zinc-5);
+  background-color: var(--zinc-500);
 }
 
 #arrow-icon {
@@ -129,7 +144,7 @@ input {
 
 #sidebar {
   align-items: start;
-  background-color: var(--zinc-2);
+  background-color: var(--zinc-200);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -146,7 +161,7 @@ input {
 }
 
 .dark #sidebar {
-  background-color: var(--zinc-7);
+  background-color: var(--zinc-700);
 }
 
 #sidebar.open {
@@ -198,19 +213,19 @@ ul {
 }
 
 .sidebar-buttons:hover {
-  background-color: var(--zinc-3);
+  background-color: var(--zinc-300);
 }
 .dark .sidebar-buttons:hover {
-  background-color: var(--zinc-6);
+  background-color: var(--zinc-600);
 }
 
 .sidebar-buttons:active {
-  background-color: var(--zinc-4);
+  background-color: var(--zinc-400);
   transition: none;
 }
 
 .dark .sidebar-buttons:active {
-  background-color: var(--zinc-5);
+  background-color: var(--zinc-500);
 }
 
 .social-links {
@@ -234,8 +249,45 @@ ul {
 }
 
 .social-links-buttons:hover {
-  background-color: var(--zinc-3);
+  background-color: var(--zinc-300);
 }
 .dark .social-links-buttons:hover {
-  background-color: var(--zinc-6);
+  background-color: var(--zinc-600);
+}
+
+#greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-bottom: 128px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#greeting > a {
+  color: var(--indigo-700);
+  text-decoration: underline;
+  transition: 150ms color ease;
+}
+
+#greeting > a:hover {
+  color: var(--indigo-600);
+}
+
+.dark #greeting > a {
+  color: var(--indigo-400);
+}
+
+.dark #greeting > a:hover {
+  color: var(--indigo-500);
+}
+
+#nav-arrow {
+  position: absolute;
+  bottom: 0;
+  font-size: 48px;
+  right: 50%;
+  transform: translateX(50%);
+  animation: bounce 1s infinite;
 }
