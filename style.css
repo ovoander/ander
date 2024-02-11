@@ -208,6 +208,7 @@ ul {
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  font-weight: 500;
   height: 32px;
   width: 100%;
   border-radius: 8px;
@@ -232,9 +233,14 @@ ul {
 
 .social-links {
   align-items: flex-end;
-  bottom: 16px;
+  width: calc(100% - 16px);
+  bottom: 0;
   display: flex;
-  justify-content: center;
+  margin: 8px;
+  padding: 4px;
+  border-radius: 8px; 
+  justify-content: space-evenly;
+  background-color: var(--zinc-800);
   position: absolute;
 }
 
@@ -244,10 +250,6 @@ ul {
   padding: 4px;
   border-radius: 8px;
   transition: 150ms background-color ease;
-}
-
-.social-links-buttons:nth-of-type(2) {
-  margin-left: 16px;
 }
 
 .social-links-buttons:hover {
@@ -296,7 +298,7 @@ ul {
   width: 100%;
   opacity: 1;
   transition: 300ms opacity linear;
-  z-index: 30;
+  z-index: 0;
 }
 
 #nav-arrow > svg {
