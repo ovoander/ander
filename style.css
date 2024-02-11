@@ -94,7 +94,7 @@ input {
   box-shadow: 0 4px 4px #00000030;
   user-select: none;
   border-radius: 8px;
-  z-index: 30;
+  z-index: 50;
 }
 
 .dark #header {
@@ -296,6 +296,7 @@ ul {
   width: 100%;
   opacity: 1;
   transition: 300ms opacity linear;
+  z-index: 30;
 }
 
 #nav-arrow > svg {
