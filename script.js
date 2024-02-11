@@ -45,7 +45,19 @@ const handleDocumentClick = (event) => {
   }
 };
 
+const fadeArrow = () => {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  const navArrow = document.getElementById("nav-arrow");
+
+  if (scrollPosition > 100) {
+    navArrow.style.opacity = 0;
+  } else {
+    navArrow.style.opacity = 1;
+  }
+};
+
 document.addEventListener("DOMContentLoaded", setThemeOnLoad);
 document.addEventListener("click", handleDocumentClick);
 sidebarButton.addEventListener("click", toggleSidebar);
 themeButton.addEventListener("click", toggleTheme);
+window.addEventListener("scroll", fadeArrow);

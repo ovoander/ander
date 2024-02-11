@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="poop.svg" />
+    <link rel="icon" href="logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,7 +43,7 @@
   </head>
   <body>
     <div id="header">
-      <a href="index.html">Ander</a>
+      <a href="#">Ander</a>
       <button class="navbar-btn" id="theme-button" title="Toggle Theme">
         <i data-lucide="moon" class="hidden" id="moon-icon"></i>
         <i data-lucide="sun" class="hidden" id="sun-icon"></i>
@@ -56,7 +56,9 @@
     <div id="sidebar">
       <ul class="links">
         <a href="#" class="sidebar-buttons">Home</a>
-        <a href="#" class="sidebar-buttons">About</a>
+        <a href="#about" class="sidebar-buttons">About</a>
+        <a href="#about-me" class="sidebar-buttons">About Me</a>
+        <a href="#projects" class="sidebar-buttons">Projects</a>
       </ul>
       <div class="social-links">
         <a
@@ -98,9 +100,11 @@
         >Ander</a
       >.
     </div>
+
     <a href="#about" id="nav-arrow">
-      <i data-lucide="arrow-down"></i>
+      <i data-lucide="chevron-down"></i>
     </a>
+    <div id="about"></div>
     <script>
       lucide.createIcons();
     </script>
