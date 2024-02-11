@@ -4,6 +4,7 @@ const themeButton = document.getElementById("theme-button");
 const menuButton = document.getElementById("menu-button");
 const moonIcon = document.getElementById("moon-icon");
 const sunIcon = document.getElementById("sun-icon");
+const arrowIcon = document.getElementById("arrow-icon");
 
 themeButton.addEventListener("click", () => {
   html.classList.toggle("dark");
@@ -39,8 +40,10 @@ menuButton.addEventListener("click", () => {
   const sidebar = document.getElementById("sidebar");
   const sidebarWidth = sidebar.offsetWidth;
   if (sidebarWidth === 0) {
+    arrowIcon.classList.add("rotate-180");
     sidebar.classList.replace("w-0", "w-48");
   } else {
+    arrowIcon.classList.remove("rotate-180");
     sidebar.classList.replace("w-48", "w-0");
   }
 });
@@ -51,6 +54,7 @@ document.addEventListener("click", (event) => {
     const sidebarWidth = sidebar.offsetWidth;
     if (sidebarWidth !== 0) {
       sidebar.classList.replace("w-48", "w-0");
+      arrowIcon.classList.remove("rotate-180");
     }
   }
 });
