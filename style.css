@@ -57,7 +57,7 @@ body {
   color: var(--zinc-900);
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  transition: background-color 300ms ease, color 300ms ease;
+  transition: 300ms background-color, color ease;
 }
 
 body.dark {
@@ -187,28 +187,31 @@ input {
 }
 
 /* Greeting section */
-#greeting {
+#greeting-container {
   align-items: center;
   display: flex;
-  font-size: 3rem;
-  font-weight: 700;
   height: 100vh;
   justify-content: center;
+}
+
+#greeting {
   margin-bottom: 128px;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 #greeting > a {
   color: var(--violet-700);
   text-decoration: underline;
-  transition: color 150ms ease;
+  transition: 150ms color ease;
+}
+
+.dark #greeting a {
+  color: var(--violet-400);
 }
 
 #greeting > a:hover {
   color: var(--violet-600);
-}
-
-.dark #greeting > a {
-  color: var(--violet-400);
 }
 
 .dark #greeting > a:hover {
