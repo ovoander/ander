@@ -91,7 +91,6 @@ input {
   margin: 8px;
   padding: 8px;
   position: sticky;
-  box-shadow: 0 4px 4px #00000030;
   user-select: none;
   border-radius: 8px;
   z-index: 50;
@@ -151,7 +150,6 @@ input {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 4px 4px #00000030;
   margin: 8px;
   position: fixed;
   right: 0px;
@@ -238,10 +236,14 @@ ul {
   display: flex;
   margin: 8px;
   padding: 4px;
-  border-radius: 8px; 
+  border-radius: 8px;
   justify-content: space-evenly;
-  background-color: var(--zinc-800);
+  background-color: var(--zinc-100);
   position: absolute;
+}
+
+.dark .social-links {
+  background-color: var(--zinc-800);
 }
 
 .social-links-buttons {
@@ -253,10 +255,10 @@ ul {
 }
 
 .social-links-buttons:hover {
-  background-color: var(--zinc-300);
+  background-color: var(--zinc-200);
 }
 .dark .social-links-buttons:hover {
-  background-color: var(--zinc-600);
+  background-color: var(--zinc-700);
 }
 
 #greeting {
