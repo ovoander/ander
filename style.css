@@ -55,7 +55,10 @@ body {
   background-color: var(--zinc-100);
   color: var(--zinc-900);
   font-family: "Montserrat", sans-serif;
-  transition: 300ms background-color, color ease;
+  transition-duration: 300ms;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: ease;
 }
 
 body.dark {
@@ -68,7 +71,7 @@ body.dark {
   align-items: center;
   position: sticky;
   background-color: transparent;
-  border-bottom: 2px solid var(--zinc-200);
+  border-bottom: 1px solid var(--zinc-200);
   height: 48px;
   padding: 8px;
   top: 0;
