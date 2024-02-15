@@ -1,0 +1,194 @@
+:root {
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+
+  --rose-50: #fff1f2;
+  --rose-100: #ffe4e6;
+  --rose-200: #fecdd3;
+  --rose-300: #fda4af;
+  --rose-400: #fb7185;
+  --rose-500: #f43f5e;
+  --rose-600: #e11d48;
+  --rose-700: #be123c;
+  --rose-800: #9f1239;
+  --rose-900: #881337;
+  --rose-950: #4c0519;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--zinc-100);
+  color: var(--zinc-900);
+  font-family: "Montserrat", sans-serif;
+  transition: 300ms background-color, color ease;
+}
+
+body.dark {
+  background-color: var(--zinc-900);
+  color: var(--zinc-100);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  background-color: transparent;
+  border-bottom: 2px solid var(--zinc-200);
+  height: 48px;
+  padding: 8px;
+  top: 0;
+  user-select: none;
+  z-index: 50;
+}
+
+.dark #header {
+  border-bottom-color: var(--zinc-800);
+}
+
+#header > a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#moon-icon.hidden,
+#sun-icon.hidden {
+  display: none;
+}
+
+.header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  padding: 4px;
+  border-radius: 8px;
+  transition: 150ms background-color ease;
+}
+
+.header-button:hover {
+  background-color: var(--zinc-200);
+}
+
+.dark .header-button:hover {
+  background-color: var(--zinc-800);
+}
+
+.header-button:active {
+  background-color: var(--zinc-300);
+  transition: none;
+}
+
+.dark .header-button:active {
+  background-color: var(--zinc-700);
+}
+
+.header-button:nth-of-type(1) {
+  margin-left: auto;
+}
+
+#sidebar {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: fixed;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  margin: 8px;
+  background-color: var(--zinc-200);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 300ms width ease;
+  user-select: none;
+}
+
+.dark #sidebar {
+  background-color: var(--zinc-800);
+}
+
+#sidebar.open {
+  width: clamp(128px, 10vw, 384px);
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+#links > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  height: 32px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 150ms ease;
+}
+
+#links > a:hover {
+  background-color: var(--zinc-300);
+}
+
+.dark #links > a:hover {
+  background-color: var(--zinc-700);
+}
+
+#links > a:active {
+  background-color: var(--zinc-400);
+  transition: none;
+}
+
+.dark #links > a:active {
+  background-color: var(--zinc-600);
+}
+
+#arrow-icon {
+  transition: 300ms rotate ease;
+}
+
+#arrow-icon.rotated {
+  rotate: 180deg;
+}
