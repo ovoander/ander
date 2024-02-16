@@ -146,7 +146,7 @@ body.dark {
 }
 
 #sidebar.open {
-  width: clamp(128px, 10vw, 384px);
+  width: clamp(128px, 10vw, 256px);
 }
 
 #links {
