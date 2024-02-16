@@ -42,16 +42,16 @@
   </head>
 
   <body
-    class="bg-zinc-100 text-zinc-900 transition-colors duration-300 dark:bg-zinc-800 dark:text-zinc-100"
+    class="bg-zinc-100 text-zinc-900 transition-colors duration-300 dark:bg-zinc-900 dark:text-zinc-100"
   >
     <div
-      class="sticky top-2 z-30 m-2 flex h-12 select-none items-center rounded-lg bg-zinc-200 p-2 dark:bg-zinc-700"
+      class="sticky top-0 z-30 flex h-12 select-none items-center border-b border-zinc-200 p-2 backdrop-blur dark:border-zinc-800"
       id="header"
     >
       <a class="text-3xl font-bold" href="#" title="Back To Top">Ander</a>
 
       <button
-        class="ml-auto rounded-lg p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600"
+        class="ml-auto rounded-lg p-1 transition-colors hover:bg-zinc-200 active:bg-zinc-300 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
         id="theme-button"
         title="Toggle Theme"
       >
@@ -95,7 +95,7 @@
         </svg>
       </button>
       <button
-        class="ml-2 rounded-lg p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600"
+        class="ml-2 rounded-lg p-1 transition-colors hover:bg-zinc-200 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
         id="menu-button"
         title="Toggle Sidebar"
       >
@@ -120,18 +120,18 @@
     </div>
     <div
       id="sidebar"
-      class="fixed bottom-0 right-0 top-14 z-20 m-2 flex w-0 select-none items-start justify-center overflow-hidden rounded-lg bg-zinc-200 text-center transition-[width] duration-300 dark:bg-zinc-700"
+      class="fixed bottom-0 right-0 top-12 z-20 m-2 flex w-0 select-none items-start justify-center overflow-hidden rounded-lg bg-zinc-200 text-center transition-[width] duration-300 dark:bg-zinc-800"
     >
       <ul class="h-full w-full p-2 font-medium">
         <li
-          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600"
+          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 active:bg-zinc-400 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
         >
           <a href="#" class="flex h-full w-full items-center justify-center"
             >Home</a
           >
         </li>
         <li
-          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600"
+          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 active:bg-zinc-400 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
         >
           <a
             href="#about"
@@ -140,7 +140,7 @@
           >
         </li>
         <li
-          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600"
+          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 active:bg-zinc-400 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
         >
           <a
             href="#about-me"
@@ -149,7 +149,7 @@
           >
         </li>
         <li
-          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-600"
+          class="mb-4 flex h-8 w-full rounded-lg transition-colors hover:bg-zinc-300 active:bg-zinc-400 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
         >
           <a
             href="#projects"
@@ -158,10 +158,10 @@
           >
         </li>
         <div
-          class="absolute bottom-2 flex w-[calc(100%-16px)] items-end justify-evenly rounded-lg bg-zinc-100 p-1 dark:bg-zinc-800"
+          class="absolute bottom-2 flex w-[calc(100%-16px)] items-end justify-evenly p-1"
         >
           <a
-            class="rounded-lg p-1 transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-700"
+            class="rounded-lg p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-700"
             href="https://github.com/ovoander"
             target="_blank"
             title="GitHub"
@@ -183,7 +183,7 @@
             </svg>
           </a>
           <a
-            class="rounded-lg p-1 transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-700"
+            class="rounded-lg p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-700"
             href="https://www.twitch.tv/b2mforty"
             target="_blank"
             title="Twitch"
@@ -202,7 +202,7 @@
             </svg>
           </a>
           <a
-            class="rounded-lg p-1 transition-colors hover:bg-zinc-200 dark:hover:bg-zinc-700"
+            class="rounded-lg p-1 transition-colors hover:bg-zinc-300 dark:hover:bg-zinc-700"
             href="https://www.youtube.com/channel/UC_1AYPc8eqNJqJyO1rQiYYg"
             target="_blank"
             title="YouTube"
@@ -351,4 +351,3 @@
     <script defer src="script.js"></script>
   </body>
 </html>
-transition-colors
