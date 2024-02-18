@@ -618,8 +618,8 @@ video {
   margin-bottom: 1rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .ml-auto {
@@ -628,10 +628,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .flex {
@@ -903,6 +899,11 @@ video {
 .active\:text-violet-400:active {
   --tw-text-opacity: 1;
   color: rgb(167 139 250 / var(--tw-text-opacity));
+}
+
+.active\:text-violet-600:active {
+  --tw-text-opacity: 1;
+  color: rgb(124 58 237 / var(--tw-text-opacity));
 }
 
 .active\:transition-none:active {
