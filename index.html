@@ -13,16 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ander</title>
   </head>
-  <body class="bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
+  <body
+    class="bg-zinc-100 text-zinc-900 transition-colors duration-300 dark:bg-zinc-900 dark:text-zinc-100"
+  >
     <div
       class="sticky top-0 z-50 flex h-12 items-center bg-zinc-200 p-2 dark:bg-zinc-800"
     >
       <a class="text-[2rem] font-bold" href="#">Ander</a>
-      <button
-        class="ml-auto rounded-lg p-1 transition-colors hover:bg-zinc-300 active:bg-zinc-400 active:transition-none dark:hover:bg-zinc-700 dark:active:bg-zinc-600"
-        id="theme-button"
-        title="Toggle Theme"
-      >
+      <button class="navbar-button" id="theme-button" title="Toggle Theme">
         <svg
           id="moon-icon"
           class="hidden"
@@ -60,6 +58,24 @@
           <path d="M20 12h2" />
           <path d="m6.34 17.66-1.41 1.41" />
           <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+      </button>
+      <button class="navbar-button">
+        <svg
+          id="arrow-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m9 6-6 6 6 6" />
+          <path d="M3 12h14" />
+          <path d="M21 19V5" />
         </svg>
       </button>
     </div>
