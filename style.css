@@ -146,7 +146,7 @@ body.dark {
 }
 
 #sidebar.open {
-  width: clamp(128px, 10vw, 256px);
+  width: calc(100vw - 16px);
 }
 
 #links {
@@ -194,4 +194,10 @@ body.dark {
 
 #arrow-icon.rotated {
   rotate: 180deg;
+}
+
+@media (min-width: 1024px) {
+  #sidebar.open {
+    width: clamp(128px, 10vw, 256px);
+  }
 }
