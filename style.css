@@ -47,10 +47,6 @@ input {
   cursor: pointer;
 }
 
-ul {
-  list-style: none;
-}
-
 body {
   background-color: var(--zinc-100);
   color: var(--zinc-900);
@@ -88,8 +84,7 @@ body.dark {
   font-weight: 700;
 }
 
-#moon-icon.hidden,
-#sun-icon.hidden {
+.hidden {
   display: none;
 }
 
@@ -97,7 +92,7 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 8px;
+  margin-left: 4px;
   padding: 4px;
   border-radius: 8px;
   transition: 150ms background-color ease;
@@ -166,7 +161,6 @@ body.dark {
   margin-bottom: 16px;
   height: 32px;
   width: 100%;
-  font-weight: 500;
   border-radius: 8px;
   transition: background-color 150ms ease;
 }

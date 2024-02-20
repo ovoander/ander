@@ -104,29 +104,29 @@
       </button>
     </div>
     <div id="sidebar">
-      <ul id="links">
+      <div id="links">
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#about-me">About Me</a>
         <a href="#projects">Projects</a>
-      </ul>
+      </div>
     </div>
-    <script>
-      const setThemeOnLoad = () => {
-        const moonIcon = document.getElementById("moon-icon");
-        const sunIcon = document.getElementById("sun-icon");
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme === "light") {
-          sunIcon.classList.remove("hidden");
-        } else {
-          document.body.classList.add("dark");
-          moonIcon.classList.remove("hidden");
-        }
-      };
-
-      setThemeOnLoad();
-    </script>
     <script src="script.js"></script>
   </body>
+  <script>
+    const setThemeOnLoad = () => {
+      const moonIcon = document.getElementById("moon-icon");
+      const sunIcon = document.getElementById("sun-icon");
+      const savedTheme = localStorage.getItem("theme") || "dark";
+
+      if (savedTheme === "light") {
+        sunIcon.classList.remove("hidden");
+      } else {
+        document.body.classList.add("dark");
+        moonIcon.classList.remove("hidden");
+      }
+    };
+
+    setThemeOnLoad();
+  </script>
 </html>
