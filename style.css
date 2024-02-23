@@ -50,7 +50,7 @@ input {
 body {
   background-color: var(--zinc-100);
   color: var(--zinc-900);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   transition-duration: 300ms;
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke;
