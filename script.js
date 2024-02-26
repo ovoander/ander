@@ -34,6 +34,20 @@ const toggleSidebar = () => {
   arrowIcon.classList.toggle("rotated");
 };
 
+const setThemeOnLoad = () => {
+  const moonIcon = document.getElementById("moon-icon");
+  const sunIcon = document.getElementById("sun-icon");
+  const savedTheme = localStorage.getItem("theme") || "dark";
+
+  if (savedTheme === "light") {
+    sunIcon.classList.remove("hidden");
+  } else {
+    document.body.classList.add("dark");
+    moonIcon.classList.remove("hidden");
+  }
+};
+
 document.addEventListener("click", handleDocumentClick);
+document.addEventListener("DOMContentLoaded", setThemeOnLoad);
 sidebarButton.addEventListener("click", toggleSidebar);
 themeButton.addEventListener("click", toggleTheme);
