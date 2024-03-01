@@ -1,27 +1,27 @@
 :root {
-  --zinc-50: #fafafa;
-  --zinc-100: #f4f4f5;
-  --zinc-200: #e4e4e7;
-  --zinc-300: #d4d4d8;
-  --zinc-400: #a1a1aa;
-  --zinc-500: #71717a;
-  --zinc-600: #52525b;
-  --zinc-700: #3f3f46;
-  --zinc-800: #27272a;
-  --zinc-900: #18181b;
-  --zinc-950: #09090b;
+  --primary-50: #fafafa;
+  --primary-100: #f4f4f5;
+  --primary-200: #e4e4e7;
+  --primary-300: #d4d4d8;
+  --primary-400: #a1a1aa;
+  --primary-500: #71717a;
+  --primary-600: #52525b;
+  --primary-700: #3f3f46;
+  --primary-800: #27272a;
+  --primary-900: #18181b;
+  --primary-950: #09090b;
 
-  --rose-50: #fff1f2;
-  --rose-100: #ffe4e6;
-  --rose-200: #fecdd3;
-  --rose-300: #fda4af;
-  --rose-400: #fb7185;
-  --rose-500: #f43f5e;
-  --rose-600: #e11d48;
-  --rose-700: #be123c;
-  --rose-800: #9f1239;
-  --rose-900: #881337;
-  --rose-950: #4c0519;
+  --secondary-50: #f5f3ff;
+  --secondary-100: #ede9fe;
+  --secondary-200: #ddd6fe;
+  --secondary-300: #c4b5fd;
+  --secondary-400: #a78bfa;
+  --secondary-500: #8b5cf6;
+  --secondary-600: #7c3aed;
+  --secondary-700: #6d28d9;
+  --secondary-800: #5b21b6;
+  --secondary-900: #4c1d95;
+  --secondary-950: #2e1065;
 }
 
 * {
@@ -43,155 +43,76 @@ input {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
   border: none;
   cursor: pointer;
 }
 
+input {
+  cursor: text;
+}
+
 body {
-  background-color: var(--zinc-100);
-  color: var(--zinc-900);
+  background-color: var(--primary-900);
+  color: var(--primary-100);
   font-family: "Space Grotesk", sans-serif;
-  transition-duration: 300ms;
-  transition-property: color, background-color, border-color,
-    text-decoration-color, fill, stroke;
-  transition-timing-function: ease;
 }
 
-body.dark {
-  background-color: var(--zinc-900);
-  color: var(--zinc-100);
-}
-
-#header {
+.header {
   display: flex;
   align-items: center;
-  position: sticky;
-  background-color: transparent;
-  border-bottom: 1px solid var(--zinc-200);
-  height: 48px;
-  padding: 8px;
-  top: 0;
-  user-select: none;
-  z-index: 50;
+  background-color: var(--primary-800);
+  padding: 0.5rem;
+  height: 3rem;
 }
 
-.dark #header {
-  border-bottom-color: var(--zinc-800);
-}
-
-#header > a {
+.title {
   font-size: 2rem;
   font-weight: 700;
-}
-
-.hidden {
-  display: none;
 }
 
 .header-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
-  padding: 4px;
-  border-radius: 8px;
+  margin-left: auto;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
   transition: 150ms background-color ease;
 }
 
 .header-button:hover {
-  background-color: var(--zinc-200);
-}
-
-.dark .header-button:hover {
-  background-color: var(--zinc-800);
+  background-color: var(--primary-700);
 }
 
 .header-button:active {
-  background-color: var(--zinc-300);
+  background-color: var(--primary-600);
   transition: none;
 }
 
-.dark .header-button:active {
-  background-color: var(--zinc-700);
-}
-
-.header-button:nth-of-type(1) {
-  margin-left: auto;
-}
-
-#sidebar {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  position: fixed;
-  top: 48px;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  margin: 8px;
-  background-color: var(--zinc-200);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: 300ms width ease;
-  user-select: none;
-}
-
-.dark #sidebar {
-  background-color: var(--zinc-800);
-}
-
-#sidebar.open {
-  width: calc(100vw - 16px);
-}
-
-#links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  padding: 8px;
-  height: 100%;
-  width: 100%;
-}
-
-#links > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  height: 32px;
-  width: 100%;
-  border-radius: 8px;
-  transition: background-color 150ms ease;
-}
-
-#links > a:hover {
-  background-color: var(--zinc-300);
-}
-
-.dark #links > a:hover {
-  background-color: var(--zinc-700);
-}
-
-#links > a:active {
-  background-color: var(--zinc-400);
-  transition: none;
-}
-
-.dark #links > a:active {
-  background-color: var(--zinc-600);
+.rotated {
+  transform: rotate(180deg);
 }
 
 #arrow-icon {
-  transition: 300ms rotate ease;
+  transition: 300ms transform ease;
 }
 
-#arrow-icon.rotated {
-  rotate: 180deg;
+#sidebar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-800);
+  bottom: 0;
+  right: 0;
+  top: 3rem;
+  width: 0;
+  overflow: hidden;
+  transition: 300ms width ease;
 }
 
-@media (min-width: 1024px) {
-  #sidebar.open {
-    width: clamp(128px, 10vw, 256px);
-  }
+#sidebar.open {
+  width: clamp(8rem, 10vw, 16rem);
 }
