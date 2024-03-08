@@ -1,10 +1,20 @@
 const arrowIcon = document.getElementById("arrow-icon");
-const sidebarButton = document.getElementById("sidebar-button");
-const sidebar = document.getElementById("sidebar");
+const themeButton = document.getElementById("theme-button");
 
-const toggleSidebar = () => {
-  arrowIcon.classList.toggle("rotated");
-  sidebar.classList.toggle("open");
+const toggleTheme = () => {
+  const moonIcon = document.getElementById("moon-icon");
+  const sunIcon = document.getElementById("sun-icon");
+  const isDark = document.body.classList.contains("dark");
+
+  document.body.classList.toggle("dark");
+  moonIcon.classList.toggle("hidden");
+  sunIcon.classList.toggle("hidden");
+
+  if (!isDark) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 };
 
-sidebarButton.addEventListener("click", toggleSidebar);
+themeButton.addEventListener("click", toggleTheme);
